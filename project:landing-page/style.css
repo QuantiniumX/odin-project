@@ -1,0 +1,148 @@
+body {
+    background: rgb(2,0,36);
+    background:  linear-gradient(176deg,rgb(18,24,27) 50%,rgb(32,39,44) 100%);
+    margin: 0;
+    height: 100%;
+}
+.header {
+    background-color: rgb(18 24 27); 
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-left: 69px;
+    margin-right: 69px;
+}
+
+#logo {
+    max-width: 50px;
+    height: auto;
+    padding-top: 8px;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    font-size: 18;
+    font-weight: 700;
+}
+
+.about {
+    color: rgb(255, 255, 255);
+}
+
+li {
+    list-style-type: none;
+}
+
+.search {
+    margin-top: 16px;
+}
+
+.login {
+    background-color: white;
+    padding: 8px; 
+}
+
+#search-bar {
+    width: 170px;
+    height: 40px;
+    background-color: rgb(50, 50, 50);
+    color: rgb(255, 255, 255);
+    border: 1px solid ;
+}
+
+.submit-button {
+    height: 40px;
+}
+
+.second-container {
+    display: flex;
+    justify-content: space-between;
+}
+.tv-container {
+    position: relative;
+    width: 400px;
+    height: 315px;
+}
+
+.tv-container iframe {
+    position: relative;
+    top: 20;
+    right: 277;
+    width: 250;
+    height: 220;
+}
+
+.tv {
+    position: relative;
+    top: 240;
+    right: 320;
+    z-index: 0;
+}
+
+#custom-video {
+    position: relative;
+    top: 20;
+    right: 277;
+    width: 250;
+    height: 220;
+    z-index: 1;
+}
+
+.left-sentence {
+  font-size: 27px;
+  margin-right: 500px;
+  margin-left: 280px;
+  margin-top: 35px;
+  color: gray;
+  text-align: center;
+}
+
+h1 {
+    margin-left: 500;
+    margin-top: 200;
+    font-size: 50;
+    color: white;
+    background-image: url('images/gradient1.jpg');
+    background-size: 30%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heading {
+    display: block;
+}
+
+.third-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    margin-top: 420px;
+    background-color: white;
+}
+
+.info {
+    max-width: 200px;
+}
+.text {
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    color: black;
+}
+
+.ht {
+    margin-top: 8px;
+}
+
+hr {
+	clear:both;
+    visibility: hidden;
+}
+.javasc {
+    margin-top: 70px;
+}
