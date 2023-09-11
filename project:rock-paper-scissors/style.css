@@ -1,0 +1,70 @@
+body {
+    background: rgb(29, 29, 29);
+}
+
+.header  h1 {
+    font-size: 48px;
+    color: white;
+    text-align: center;
+
+}
+
+.buttons-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 5% 2% 5%;
+}
+
+.buttons-top button {
+    padding: 8px;
+    background: rgb(47, 47, 47);
+    border-radius: 8px;
+    font-size: 24px;
+    color: white;
+}
+
+.game-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.game-competitors {
+    display: flex;
+    margin: 5% 20% 5% 20%;
+    gap: 300px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.game-container img {
+    width: 200px;
+    height: 200px;
+}
+
+.game-container h1 {
+    text-align: center;
+}
+
+.computer, .player {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.game-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 70px;
+}
+
+.rock, .paper, .scissors {
+    padding: 10px;
+    border-radius: 8px;
+    background: rgb(47, 47, 47);
+    color: white;
+    font-size: 24px;
+}
