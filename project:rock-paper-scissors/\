@@ -16,9 +16,7 @@ const playerColor = document.getElementById('playerScorePara');
 const computerColor = document.getElementById('computerScorePara');
 const tryAgainBtn = document.querySelector('.retry');
 const modalTitleEl = document.querySelector('.modal-title');
-const modalCloseEl = document.getElementById('close-modal');
-const modalDiv = document.querySelector('.popup-modal');
-const backdrop = document.querySelector('.backdrop');
+const modalCloseEl = document.querySelector('close-modal');
 
 const playGame = function(playerSel, computerSel) {
     if (playerSel == computerSel) {
@@ -86,22 +84,18 @@ const updateScore = function() {
     computerColor.style.color = "white";
 };
 
-const restartGameByModal = function() {
-    playerScore = 0;
-    computerScore = 0;
-    playerScoreEl.textContent = "Player : 0";
-    computerScoreEl.textContent = "Computer : 0";
-    modalDiv.classList.toggle('show');
-    backdrop.classList.toggle('show');
-};
-
 const restartGame = function() {
     playerScore = 0;
     computerScore = 0;
     playerScoreEl.textContent = "Player : 0";
     computerScoreEl.textContent = "Computer : 0";
-}
+    modalDiv.classList.toggle('none');
+    backdrop.classList.toggle('none');
+};
+
 function toggleModal() {
+    const modalDiv = document.querySelector('.popup-modal');
+    const backdrop = document.querySelector('.backdrop');
     if (playerScore === 5) {
         modalTitleEl.textContent = `Congrats You Won`;
         modalDiv.classList.toggle('show');
@@ -129,8 +123,7 @@ rockBtn.addEventListener('click', () => buttonClick('rock'));
 paperBtn.addEventListener('click', () => buttonClick('paper'));
 scissorsBtn.addEventListener('click', () => buttonClick('scissor'));
 tryAgainBtn.addEventListener('click', restartGame);
-modalCloseEl.addEventListener('click', restartGameByModal);
-
+modalCloseEl.addEventListener('click', restartGame);
 
 
 
