@@ -1,28 +1,33 @@
 let currentSize = 16;
-let mode;
+let mode = 'color';
 let currentColor = 'rgb(0, 0, 0)';
 
 const setColor = function(newColor) {
     currentColor = newColor;
 }
 
+const setCurrentSize = function(newSize) {
+    currentSize = newSize;
+}
 const updateSize = function(value) {
     sizeValue.innerHTML = `${value} x ${value}`;
 }
 
 const clearAll = function() {
     grid.innerHTML = '';
-    makeGrid()
+    makeGrid(currentSize);
 }
+
+
 const changeSize = function(value) {
-    currentSize = value;
+    setCurrentSize(value);
     updateSize(value);
     clearAll();
 };
 
 const makeGrid = function(size) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
     for (let i = 0; i < size * size; i++) {
         const gridEl = document.createElement('div');
@@ -45,7 +50,7 @@ const changeColor = function(e) {
 
         e.target.style.backgroundColor = `rgb(${redRatio}, ${greenRatio}, ${blueRatio})`;
     }
-    else if(mode === 'color') {
+    else if (mode === 'color') {
         e.target.style.backgroundColor = currentColor;
     }
     if (mode === 'eraser') {
@@ -77,8 +82,8 @@ const setMode = function(newMode) {
 }
 
 window.onload = () => {
-    makeGrid(16);
-    setMode('color');
+    makeGrid(currentSize);
+    setMode(mode);
 }
 const colorPanel = document.getElementById('color-panel');
 const colorBtn = document.getElementById('color-mode');
