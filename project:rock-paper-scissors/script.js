@@ -21,7 +21,7 @@ const modalDiv = document.querySelector('.popup-modal');
 const backdrop = document.querySelector('.backdrop');
 
 const playGame = function(playerSel, computerSel) {
-    if (playerSel == computerSel) {
+    if (playerSel === computerSel) {
         roundWinner = 'tie';
     }
     else if ((playerSel === 'rock' && computerSel === 'scissor') || (playerSel === 'paper' && computerSel === 'rock') || (playerSel === 'scissor' && computerSel === 'paper')) {
@@ -130,8 +130,3 @@ paperBtn.addEventListener('click', () => buttonClick('paper'));
 scissorsBtn.addEventListener('click', () => buttonClick('scissor'));
 tryAgainBtn.addEventListener('click', restartGame);
 modalCloseEl.addEventListener('click', restartGameByModal);
-
-
-
-
-
